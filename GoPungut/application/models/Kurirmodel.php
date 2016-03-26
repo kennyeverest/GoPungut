@@ -13,7 +13,7 @@
 	public function getUsernamePassword()
 	{
 		$sql= 'SELECT username_kurir, password_kurir FROM kurir';
-		$hasil = $hasil->db->query($sql);
+		$hasil = $this->db->query($sql);
 		return $hasil;
 	}
 

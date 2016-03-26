@@ -12,7 +12,7 @@
 
 	public function getUsernamePassword()
 	{
-		$sql= 'SELECT username_pengelola, password_pengelola FROM pengelola_sampah';
+		$sql = 'SELECT email_pengelola, password_pengelola FROM pengelola_sampah';
 		$hasil = $this->db->query($sql);
 		return $hasil;
 	}
@@ -24,4 +24,3 @@
 
 	}
  }
-?>

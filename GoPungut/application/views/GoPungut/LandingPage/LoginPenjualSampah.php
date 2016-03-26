@@ -23,7 +23,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-           <a  style="float:right" href="<?php echo base_url()?>index.php/GoPungut">
+           <a  style="float:right" href="<?php echo base_url()?>index.php/LandingPage">
          <img src="http://expediaholiday.d.seven2.net/_images/modal_close.png"/>
          </a><br><br><br>
 			<div class="text-center">
@@ -35,29 +35,31 @@
 		</div>
 
         <div class="modal-body">
-          <?php
-  		$attribute = array( 'class' => 'form-horizontal',
-  		       'role' => 'form');
-  		echo form_open($aksi2,$attribute);
-  		?>
+			<?php
+				$attribute = array( 'class' => 'form-horizontal',
+							 'role' => 'form');
+				echo form_open($aksi,$attribute);
+				?>
 			  <div class="form-group row">
-				<label for="inputEmail" class="col-sm-4 form-control-label">Email</label>
+				<label for="username" class="col-sm-4 form-control-label" required>Username</label>
 				<div class="col-sm-8">
-				  <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email">
+				  <input type="text" class="form-control" id="username" placeholder="Username" name="username">
 				</div>
 			  </div>
 			  <div class="form-group row">
-				<label for="inputPassword" class="col-sm-4 form-control-label">Password</label>
+				<label for="inputPassword" class="col-sm-4 form-control-label" required>Password</label>
 				<div class="col-sm-8">
 				  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
 				</div>
 			  </div>
-        <div class="kirim">
-        <button type="submit" class="btn btn-secondary">Login</button>
-      </div>
+			  <div class="form-group row">
+				<div class="col-sm-9"></div>
+				<div class="col-sm-3">
+				<button type="submit" class="btn btn-secondary" >Sign In</button>
+				</div>
+				</div>
 			</form>
         </div>
-
 
       </div>
 

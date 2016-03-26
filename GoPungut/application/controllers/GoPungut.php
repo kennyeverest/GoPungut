@@ -50,15 +50,21 @@ class GoPungut extends CI_Controller
 		$this->load->helper('url');
 		$data['user']="ko gag muncul";
 		$userChoosen = $this->input->post('signIn');
-		if($userChoosen==1)
+		if($userChoosen==1){
 			$data['user']="Pengelola Sampah";
-		else
-			if($userChoosen==2)
-			$data['user']="Masyarakat";
-		else
-			if($userChoosen==3)
-			$data['user']="Kurir";
+		$data['aksi2'] = 'LoginPengelola/login';
 		$this->load->view('/GoPungut/LandingPage/Login',$data);
+		}
+		else if($userChoosen==2){
+				$data['aksi'] = 'LoginPenjual/login';
+			$data['user']="Masyarakat";
+			$this->load->view('/GoPungut/LandingPage/LoginPenjualSampah',$data);
+		}
+		else	if($userChoosen==3){
+			$data['aksi'] = 'LoginKurir/login';
+			$data['user']="Kurir";
+			$this->load->view('/GoPungut/LandingPage/LoginKurir',$data);
+		}
 
 
 	}
