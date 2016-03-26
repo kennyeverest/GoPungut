@@ -3,25 +3,25 @@
 /**
 *
 */
- class PengelolaSampahModel extends CI_Model
+ class PengelolaModel extends CI_Model
  {
-	 function __construct
+	 function __construct()
 	 {
 		parent::__construct();
 	 }
-	
+
 	public function getUsernamePassword()
 	{
 		$sql= 'SELECT username_pengelola, password_pengelola FROM pengelola_sampah';
-		$hasil = $hasil->db->query($sql);
+		$hasil = $this->db->query($sql);
 		return $hasil;
 	}
-	
-	public function uploadSampahYangDibutuhkan()
+
+	public function daftarPengelola($data)
 	{
-		$this->db->insert($data);
+		$this->db->insert('pengelola_sampah',$data);
 		return $this->db->affected_rows();
-		
+
 	}
  }
 ?>
